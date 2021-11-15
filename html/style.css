@@ -1,0 +1,17 @@
+/* Fonts */
+
+h1 {
+    font-family: 'Space Mono', monospace;
+}
+
+p {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* End Fonts */
+
+body  {
+    max-width: 940px;
+    display: block;
+    margin: auto;
+}
