@@ -5,7 +5,7 @@ h1 {
     font-size: 1.5rem;
 }
 
-p {
+p, li {
     font-family: 'Manrope', sans-serif;
 }
 
@@ -44,11 +44,11 @@ nav {
     width: auto;
 }
 
-.nav-socials {
+.socials {
     margin-right: 1rem;
 }
 
-.nav-socials > i {
+.socials > i {
     margin: 0 0.25rem;
 }
 
@@ -102,4 +102,18 @@ nav {
     .intro > img {
         width: 50%;
     }
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.footer-content > .contact {
+    border-left: solid darkgrey 2px;
+}
+
+.contact > ul {
+    list-style: none;
 }
