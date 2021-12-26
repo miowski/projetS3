@@ -85,22 +85,30 @@ nav {
     border: solid #9fe5d0;
 }
 
-.intro-text {
-    margin-bottom: 1rem;
-}
-
 .intro-text > h1 {
     margin-top: 0;
 }
 
 @media (min-width: 768px) {
-    .intro {
-        display: flex;
-        flex-direction: row-reverse;
-    }
 
     .intro > img {
         width: 50%;
+    }
+
+    .sub-intro {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .intro-text {
+        margin-bottom: 1rem;
+        max-width: 50%;
+    }
+
+    .intro-photo {
+        max-width: 50%;
     }
 }
 
