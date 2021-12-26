@@ -4,15 +4,24 @@ h1 {
   font-family: 'Space Mono', monospace;
   font-size: 1.5rem;
 }
+
 p {
   font-family: 'Manrope', sans-serif;
+  font-weight: 400;
 }
+
+strong {
+  font-weight: 600;
+}
+
 body {
   margin: 0;
 }
+
 main {
   margin: 1rem;
 }
+
 .nav-content {
   max-width: 940px;
   margin: auto;
@@ -25,26 +34,26 @@ main {
     width: auto;
   }
 }
-.main-content {
+
+.main-content, .footer-content, .timeline {
   max-width: 940px;
   display: block;
   margin: auto;
 }
-.footer-content {
-  max-width: 940px;
-  display: block;
-  margin: auto;
-}
+
+
 nav {
   height: 4rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0 3px 3px;
 }
+
 .nav-socials {
   margin-right: 1rem;
   >i {
     margin: 0 0.25rem;
   }
 }
+
 .timeline-container {
   display: flex;
   align-items: center;
@@ -57,45 +66,57 @@ nav {
     margin: 0 1rem;
   }
 }
+
 .mini-timeline {
   >svg {
     width: fit-content;
   }
 }
+
+.intro {
+  height: calc(100vh - 5rem);
+}
+
 .intro-photo {
   max-width: 100%;
   margin: 2rem 0;
 }
+
 #intro-arrow {
   display: block;
-  margin: auto;
+  margin: 1.5rem auto;
   width: 2rem;
   height: 2rem;
   padding: 1rem;
   border-radius: 3rem;
   border: solid #9fe5d0;
 }
+
 .intro-text {
   >h1 {
     margin-top: 0;
   }
 }
+
 @media (min-width: 768px) {
   .intro {
     >img {
       width: 50%;
     }
   }
+
   .sub-intro {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row-reverse;
     align-items: center;
   }
+
   .intro-text {
     margin-bottom: 1rem;
     max-width: 50%;
   }
+
   .intro-photo {
     max-width: 50%;
   }
