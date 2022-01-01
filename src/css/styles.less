@@ -1,13 +1,17 @@
-/* Fonts */
-/* End Fonts */
 h1 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.5rem;
+}
+
+h2 {
+  font-family: "Space Mono", monospace;
+  font-size: 1.25rem;
 }
 
 p {
   font-family: 'Manrope', sans-serif;
   font-weight: 400;
+  line-height: 1.75rem;
 }
 
 strong {
@@ -29,6 +33,7 @@ main {
   justify-content: space-between;
   align-items: center;
   height: 4rem;
+
   >img {
     height: 4rem;
     width: auto;
@@ -41,6 +46,22 @@ main {
   margin: auto;
 }
 
+.footer-content {
+  border-top: solid black 1px;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+
+  >div {
+    padding: 2rem;
+    width: 100%;
+  }
+}
+
+.footer-contact {
+  border-left: solid black 1px;
+}
 
 nav {
   height: 4rem;
@@ -73,10 +94,6 @@ nav {
   }
 }
 
-.intro {
-  height: calc(100vh - 5rem);
-}
-
 .intro-photo {
   max-width: 100%;
   margin: 2rem 0;
@@ -88,8 +105,6 @@ nav {
   width: 2rem;
   height: 2rem;
   padding: 1rem;
-  border-radius: 3rem;
-  border: solid #9fe5d0;
 }
 
 .intro-text {
@@ -98,7 +113,62 @@ nav {
   }
 }
 
+.timeline-block {
+  padding: 0 0 1rem 1rem;
+  border-left: solid black;
+
+  @media (min-width: 768px) {
+    padding: 3rem;
+    margin: auto 3rem;
+  }
+
+  >h1 {
+    text-indent: -1rem;
+    margin-top: 0;
+
+    >span {
+      font-size: smaller;
+      padding: 0.25rem 0.5rem;
+      background: #9fe5d0;
+      border-radius: 0.25rem;
+    }
+  }
+
+  >h1::before {
+    content: "*";
+    position: relative;
+    left: -0.5rem;
+    background: #9fe5d0;
+    border-radius: 1rem;
+    width: 1rem;
+
+    @media (min-width: 768px) {
+      left: -2.5rem;
+    }
+  }
+
+  >img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.timeline-block:nth-last-child(1)::after {
+  content: "/";display: block;
+  position: relative;
+  writing-mode: vertical-lr;
+  bottom: -1rem;
+  left: -1.65rem;
+  font-weight: 900;
+
+  @media (min-width: 768px) {
+    left: -3.65rem;
+    bottom: -3rem;
+  }
+}
+
 @media (min-width: 768px) {
+
   .intro {
     >img {
       width: 50%;
