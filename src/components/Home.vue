@@ -176,6 +176,11 @@ export default {
   border-left: solid black;
 }
 
+.timeline-block > img {
+  max-width: 100%;
+  height: auto;
+}
+
 .timeline-block > h1 {
   text-indent: -1rem;
   margin-top: 0;

@@ -53,12 +53,24 @@
         </div>
         <div class="footer-contact">
           <h2>Contactez-nous</h2>
-          <p>4 place Tharradin
-            <br>
-            25200 Montbéliard
-            <br>
-            <a href="tel:+33381994734">03 81 99 47 34</a>
-            <br>
+          <div>
+            <div>
+              <h3>Adresse</h3>
+              <p>4 place Tharradin<br>
+                25200 Montbéliard<br>
+                FRANCE
+              </p>
+            </div>
+            <div>
+              <h3>Téléphone</h3>
+              <p><a href="tel:+33381994734">03 81 99 47 34</a></p>
+            </div>
+            <div>
+              <h3>E-mail</h3>
+              <p><a href="mailto:dut-mmi-montbeliard@univ-fcomte.fr">dut-mmi-montbeliard@univ-fcomte.fr</a></p>
+            </div>
+          </div>
+          <p style="font-size: smaller">
             <router-link to="/Legal"><a>Mentions légales</a></router-link>
           </p>
         </div>
@@ -87,6 +99,12 @@ h2 {
   font-size: 1.25rem;
 }
 
+h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 p {
   font-family: 'Manrope', sans-serif;
   font-weight: 400;
@@ -99,6 +117,9 @@ strong {
 
 body {
   margin: 0;
+}
+
+* {
   scroll-behavior: smooth;
 }
 
@@ -151,6 +172,8 @@ nav {
 .socials {
   margin-right: 1rem;
   list-style: none;
+  text-indent: 0;
+  padding: 0;
 }
 
 .socials > li {
@@ -172,13 +195,28 @@ nav {
     flex-direction: row;
   }
 
-  .footer-content > div {
-    width: 100%;
+  .footer-content > div.footer-contact {
+    width: 67%;
   }
 
   .footer-contact {
     border-left: solid black 1px;
     border-top: none;
+  }
+
+  .footer-contact > div {
+    display: flex;
+  }
+
+  .footer-contact > div > div {
+    width: 33%;
+    font-size: smaller;
+    padding: 0 1rem;
+    border-left: solid 1px black;
+  }
+
+  .footer-contact > div > div:nth-child(1) {
+    border-left: none;
   }
 }
 </style>
