@@ -175,12 +175,11 @@ export default {
 }
 
 .timeline-block > h1::before {
-  content: "*";
+  content: "•";
   position: relative;
   left: -0.5rem;
-  background: #9fe5d0;
+  background: white;
   border-radius: 1rem;
-  width: 1rem;
 }
 
 @media (min-width: 768px) {

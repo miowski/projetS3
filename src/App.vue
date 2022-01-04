@@ -105,15 +105,12 @@ footer, main {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .footer-content > div {
   padding: 0 2rem;
   width: 100%;
-}
-
-.footer-contact {
-  border-left: solid black 1px;
 }
 
 nav {
@@ -127,5 +124,16 @@ nav {
 
 .nav-socials > i {
   margin: 0 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .footer-contact {
+    border-left: solid black 1px;
+    border-top: none;
+  }
 }
 </style>
