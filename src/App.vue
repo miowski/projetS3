@@ -99,11 +99,11 @@ strong {
 
 body {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
-* {
+a {
   transition: .2s;
-  scroll-behavior: smooth;
 }
 
 main {

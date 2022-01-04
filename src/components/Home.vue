@@ -7,11 +7,11 @@
             <p>1997</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="244" height="32" viewBox="0 0 244 32">
               <g id="mini-timeline" transform="translate(-260 -203)">
-                <g id="Ellipse_8" transform="translate(260 203)" fill="none" stroke="#b4f8c3" stroke-width="3">
+                <g id="arrow-top" transform="translate(260 203)" fill="none" stroke="#b4f8c3" stroke-width="3">
                   <circle cx="16" cy="16" r="16" stroke="none"/>
                   <circle cx="16" cy="16" r="14.5" fill="none"/>
                 </g>
-                <g id="Ellipse_28" transform="translate(472 203)" fill="none" stroke="#b4f8c3" stroke-width="3">
+                <g id="arrow-bottom" transform="translate(472 203)" fill="none" stroke="#b4f8c3" stroke-width="3">
                   <circle cx="16" cy="16" r="16" stroke="none"/>
                   <circle cx="16" cy="16" r="14.5" fill="none"/>
                 </g>
@@ -139,11 +139,32 @@ export default {
 }
 
 #intro-arrow {
+  position: relative;
   display: block;
   margin: 1.5rem auto;
   width: 2rem;
   height: 2rem;
   padding: 1rem;
+  border: solid #9fe5d0;
+  border-radius: 5rem;
+}
+
+#intro-arrow:hover {
+  animation: intro-arrow-single .3s;
+}
+
+@keyframes intro-arrow-single {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -1rem;
+  }
+
+  100% {
+    top: 0;
+  }
 }
 
 .intro-text > h1 {
@@ -153,13 +174,6 @@ export default {
 .timeline-block {
   padding: 0 0 1rem 1rem;
   border-left: solid black;
-}
-
-@media (min-width: 768px) {
-  .timeline-block {
-    padding: 3rem;
-    margin: auto 3rem;
-  }
 }
 
 .timeline-block > h1 {
@@ -183,36 +197,38 @@ export default {
 }
 
 @media (min-width: 768px) {
+
+  .timeline-block {
+    padding: 3rem;
+    margin: auto 3rem;
+  }
+
   .timeline-block > h1::before {
     left: -2.5rem;
   }
-}
 
-.timeline-block > img {
-  display: block;
-  margin: 2rem auto;
-  max-width: 50%;
-  height: auto;
-}
+  .timeline-block > img {
+    display: block;
+    margin: 2rem auto;
+    max-width: 50%;
+    height: auto;
+  }
 
-.timeline-block:nth-last-child(1)::after {
-  content: "/";
-  display: block;
-  position: relative;
-  writing-mode: vertical-lr;
-  bottom: -1rem;
-  left: -1.65rem;
-  font-weight: 900;
-}
+  .timeline-block:nth-last-child(1)::after {
+    content: "/";
+    display: block;
+    position: relative;
+    writing-mode: vertical-lr;
+    bottom: -1rem;
+    left: -1.65rem;
+    font-weight: 900;
+  }
 
-@media (min-width: 768px) {
   .timeline-block:nth-last-child(1)::after {
     left: -3.65rem;
     bottom: -3rem;
   }
-}
 
-@media (min-width: 768px) {
   .intro > img {
     width: 50%;
   }
