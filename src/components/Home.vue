@@ -189,7 +189,9 @@ export default {
 }
 
 .timeline-block > img {
-  max-width: 100%;
+  display: block;
+  margin: 2rem auto;
+  max-width: 50%;
   height: auto;
 }
 
