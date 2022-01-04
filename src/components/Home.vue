@@ -60,23 +60,10 @@
             sociétés, on constate l’avant-gardisme de l’initiative. Zoom sur l’évolution du département MMI
             Montbéliard,
             depuis ses débuts en 1997.</p>
-          <div class="timeline-block">
-            <h1><span>1997</span> Un titre de bloc</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut, consequatur cupiditate
-              doloribus earum eveniet exercitationem expedita nihil nisi, nostrum omnis perferendis, possimus
-              soluta ullam unde voluptatibus voluptatum! Iusto, magni? Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Ab accusamus animi aperiam assumenda dignissimos, doloribus dolorum error expedita
-              facilis id, ipsa porro praesentium quam qui, quidem quo tempora velit veniam!</p>
-            <img src="../assets/mmi-logo.png" alt="Image">
-          </div>
-          <div class="timeline-block">
-            <h1><span>1997</span> Autre titre de bloc</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut, consequatur cupiditate
-              doloribus earum eveniet exercitationem expedita nihil nisi, nostrum omnis perferendis, possimus
-              soluta ullam unde voluptatibus voluptatum! Iusto, magni? Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Ab accusamus animi aperiam assumenda dignissimos, doloribus dolorum error expedita
-              facilis id, ipsa porro praesentium quam qui, quidem quo tempora velit veniam!</p>
-            <img src="../assets/intro-photo.png" alt="Image">
+          <div v-for="section in orderedSectionList" :key="section.id" class="timeline-block">
+            <h1><span>{{ section.acf.year | orderBy }}</span> {{ section.acf.title }}</h1>
+            <p>{{ section.acf.description }}</p>
+            <img :src="section.acf.image" alt="Image">
           </div>
         </div>
       </div>
@@ -85,11 +72,31 @@
 </template>
 
 <script>
+import param from '@/param/param'
+import axios from 'axios';
+import _ from 'lodash';
+
 export default {
   name: 'Home',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      sectionList: []
+    }
+  },
+
+  created() {
+    // Liste des sections
+    axios.get(param.host + 'home-section')
+      .then(response => {
+        console.log('Réponse :', response);
+        this.sectionList = response.data;
+      })
+      .catch(error => console.log(error))
+  },
+
+  computed: {
+    orderedSectionList: function () {
+      return _.orderBy(this.sectionList, 'acf.year');
     }
   }
 }
