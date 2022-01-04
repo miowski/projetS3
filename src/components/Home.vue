@@ -7,15 +7,15 @@
             <p>1997</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="244" height="32" viewBox="0 0 244 32">
               <g id="mini-timeline" transform="translate(-260 -203)">
-                <g id="arrow-top" transform="translate(260 203)" fill="none" stroke="#b4f8c3" stroke-width="3">
+                <g id="ellipse0" transform="translate(260 203)" fill="none" stroke="#b4f8c3" stroke-width="3">
                   <circle cx="16" cy="16" r="16" stroke="none"/>
                   <circle cx="16" cy="16" r="14.5" fill="none"/>
                 </g>
-                <g id="arrow-bottom" transform="translate(472 203)" fill="none" stroke="#b4f8c3" stroke-width="3">
+                <g id="ellipse1" transform="translate(472 203)" fill="none" stroke="#b4f8c3" stroke-width="3">
                   <circle cx="16" cy="16" r="16" stroke="none"/>
                   <circle cx="16" cy="16" r="14.5" fill="none"/>
                 </g>
-                <line id="Ligne_11" x2="184" transform="translate(289.5 218.5)" fill="none" stroke="#b4f8c3"
+                <line id="line" x2="184" transform="translate(289.5 218.5)" fill="none" stroke="#b4f8c3"
                       stroke-width="3"/>
                 <circle id="Ellipse_25" cx="5" cy="5" r="5" transform="translate(271 214)" fill="#9fe5d0"/>
                 <circle id="Ellipse_29" cx="5" cy="5" r="5" transform="translate(483 214)" fill="#9fe5d0"/>
@@ -150,10 +150,10 @@ export default {
 }
 
 #intro-arrow:hover {
-  animation: intro-arrow-single .3s;
+  animation: intro-arrow .3s;
 }
 
-@keyframes intro-arrow-single {
+@keyframes intro-arrow {
   0% {
     top: 0;
   }
@@ -164,6 +164,18 @@ export default {
 
   100% {
     top: 0;
+  }
+}
+
+#line {
+  stroke-dasharray: 40 10;
+  stroke-dashoffset: 0;
+  animation: timeline-bar 5s linear infinite;
+}
+
+@keyframes timeline-bar {
+  to {
+    stroke-dashoffset: -50;
   }
 }
 
