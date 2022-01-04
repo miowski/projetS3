@@ -51,15 +51,12 @@
           </a>
         </div>
         <div class="timeline" id="timeline">
-          <p><strong>Il y a 25 ans était décrétée l’ouverture d’un département d’un genre nouveau : Service Réseau et
-            Communications.</strong>
+          <p id="timeline-intro-text"><strong>Il y a 25 ans était décrétée l’ouverture d’un département d’un genre nouveau : Service Réseau et
+            Communications. </strong>
             Alors qu’Internet se répand à grande vitesse, cette formation forme de futurs ingénieurs capables de
-            créer
-            des réseaux d’ordinateurs et des sites web. Aujourd’hui, au vu de la place qu’a pris Internet au sein de
-            nos
-            sociétés, on constate l’avant-gardisme de l’initiative. Zoom sur l’évolution du département MMI
-            Montbéliard,
-            depuis ses débuts en 1997.</p>
+            créer des réseaux d’ordinateurs et des sites web. Aujourd’hui, au vu de la place qu’a pris Internet au sein
+            de nos sociétés, on constate l’avant-gardisme de l’initiative. Zoom sur l’évolution du département MMI
+            Montbéliard, depuis ses débuts en 1997.</p>
           <div v-for="section in orderedSectionList" :key="section.id" class="timeline-block">
             <h1><span>{{ section.acf.year | orderBy }}</span> {{ section.acf.title }}</h1>
             <p>{{ section.acf.description }}</p>
@@ -109,6 +106,10 @@ export default {
   padding: 1rem;
 }
 
+#timeline-intro-text {
+  padding: 2rem 0;
+}
+
 .timeline {
   max-width: 940px;
   display: block;
@@ -131,6 +132,14 @@ export default {
 
 .mini-timeline > svg {
   width: fit-content;
+}
+
+.intro {
+  height: calc(100vh - 4rem)
+}
+
+.intro-text > h1 {
+  font-size: 2.25rem;
 }
 
 .intro-photo {
@@ -168,14 +177,15 @@ export default {
 }
 
 #line {
-  stroke-dasharray: 40 10;
+  stroke-dasharray: 40 10 0.1 10;
   stroke-dashoffset: 0;
+  stroke-linecap: round;
   animation: timeline-bar 5s linear infinite;
 }
 
 @keyframes timeline-bar {
   to {
-    stroke-dashoffset: -50;
+    stroke-dashoffset: -60.1;
   }
 }
 
@@ -229,6 +239,7 @@ export default {
     margin: 2rem auto;
     max-width: 50%;
     height: auto;
+    padding: 1rem;
   }
 
   .timeline-block:nth-last-child(1)::after {

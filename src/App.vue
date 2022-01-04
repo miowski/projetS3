@@ -70,11 +70,11 @@
               <p><a href="mailto:dut-mmi-montbeliard@univ-fcomte.fr">dut-mmi-montbeliard@univ-fcomte.fr</a></p>
             </div>
           </div>
-          <p style="font-size: smaller">
-            <router-link to="/Legal"><a>Mentions légales</a></router-link>
-          </p>
         </div>
       </div>
+      <p style="font-size: smaller">
+        <router-link to="/Legal"><a>Mentions légales</a></router-link>
+      </p>
     </footer>
   </div>
 </template>
@@ -152,7 +152,7 @@ footer, main {
 }
 
 .footer-content {
-  border-top: solid black 1px;
+  border-top: solid lightgrey 1px;
   padding: 1rem 0;
   margin-top: 2rem;
   display: flex;
@@ -190,6 +190,12 @@ nav {
   color: #9fe5d0;
 }
 
+footer > p {
+  display: block;
+  margin: auto;
+  width: fit-content;
+}
+
 @media (min-width: 768px) {
   .footer-content {
     flex-direction: row;
@@ -200,7 +206,7 @@ nav {
   }
 
   .footer-contact {
-    border-left: solid black 1px;
+    border-left: solid lightgrey 1px;
     border-top: none;
   }
 
@@ -212,7 +218,7 @@ nav {
     width: 33%;
     font-size: smaller;
     padding: 0 1rem;
-    border-left: solid 1px black;
+    border-left: solid 1px lightgrey;
   }
 
   .footer-contact > div > div:nth-child(1) {
