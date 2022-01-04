@@ -6,10 +6,24 @@
           <router-link to="/">
             <img id="nav-logo" src="./assets/mmi-logo.png" alt="Logo du MMI (contour)">
           </router-link>
-          <div class="nav-socials">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fas fa-globe"></i>
+          <div>
+            <ul class="socials">
+              <li>
+                <a href="https://mmimontbeliard.com">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/mmi_montbeliard/">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://facebook.com/">
+                  <i class="fas fa-globe"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -19,11 +33,23 @@
       <div class="footer-content">
         <div class="footer-socials">
           <h2>Suivez-nous</h2>
-          <p>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fas fa-globe"></i>
-          </p>
+          <ul class="socials">
+            <li>
+              <a href="https://mmimontbeliard.com">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/mmi_montbeliard/">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/">
+                <i class="fas fa-globe"></i>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="footer-contact">
           <h2>Contactez-nous</h2>
@@ -75,6 +101,11 @@ body {
   margin: 0;
 }
 
+* {
+  transition: .2s;
+  scroll-behavior: smooth;
+}
+
 main {
   margin: 1rem;
 }
@@ -118,12 +149,23 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.1) 0 3px 3px;
 }
 
-.nav-socials {
+.socials {
   margin-right: 1rem;
+  list-style: none;
 }
 
-.nav-socials > i {
+.socials > li {
   margin: 0 0.25rem;
+  display: inline-block;
+}
+
+.socials > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+.socials > li > a:hover {
+  color: #9fe5d0;
 }
 
 @media (min-width: 768px) {
