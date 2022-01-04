@@ -141,7 +141,6 @@ footer, main {
 
 .footer-content > div {
   padding: 0 2rem;
-  width: 100%;
 }
 
 nav {
@@ -171,6 +170,10 @@ nav {
 @media (min-width: 768px) {
   .footer-content {
     flex-direction: row;
+  }
+
+  .footer-content > div {
+    width: 100%;
   }
 
   .footer-contact {

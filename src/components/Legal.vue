@@ -28,8 +28,7 @@
         E-mail : dut-mmi-montbeliard@univ-fcomte.fr<br>
         Siret / N°TVA :</p>
 
-      <h2>Conditions d’utilisation :</h2>
-      <br>
+      <h2>Conditions d’utilisation</h2>
       <p>Conformément à la loi Informatique et Libertés du 6 janvier 1978, vous disposez d'un droit d'accès et de
         rectification aux données vous concernant par simple demande mail, écrite ou téléphonique. Le département MMI et
         Philémon VARRET, Romain VILLAR, Lucas VEROVE ne peuvent être tenus responsable du contenu du site. Ce site est
@@ -51,10 +50,11 @@
       <p>
         Le graphisme (incluant le webdesign et le logo) a été réalisé par Romain VILLAR.
         Les photographies ont été réalisées par Philémon VARRET, Romain VILLAR, Lucas VEROVE. Les illustrations et
-        visuels ont été téléchargés depuis les banques d’images libres de droits Freepik, Pixabay, Unsplash, Flaticon etc.
+        visuels ont été téléchargés depuis les banques d’images libres de droits Freepik, Pixabay, Unsplash, Flaticon
+        etc.
       </p>
-      <h2>Déclaration à la CNIL :</h2>
 
+      <h2>Déclaration à la CNIL</h2>
       <p>Ce site ne récoltant aucune donnée personnelle, le RGPD ne s'y applique pas.
         <br>
         Conformément à la loi 78-17 du 6 janvier 1978 (modifiée par la loi 2004-801 du 6 août 2004 relative à la
@@ -82,5 +82,6 @@ export default {
   max-width: 940px;
   display: block;
   margin: auto;
+  padding: 1rem;
 }
 </style>
