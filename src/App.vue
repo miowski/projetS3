@@ -9,7 +9,7 @@
           <div>
             <ul class="socials">
               <li>
-                <a href="https://mmimontbeliard.com">
+                <a href="https://www.facebook.com/">
                   <i class="fab fa-facebook-square"></i>
                 </a>
               </li>
@@ -19,7 +19,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://facebook.com/">
+                <a href="https://mmimontbeliard.com">
                   <i class="fas fa-globe"></i>
                 </a>
               </li>
@@ -35,7 +35,7 @@
           <h2>Suivez-nous</h2>
           <ul class="socials">
             <li>
-              <a href="https://mmimontbeliard.com">
+              <a href="https://www.facebook.com/">
                 <i class="fab fa-facebook-square"></i>
               </a>
             </li>
@@ -45,7 +45,7 @@
               </a>
             </li>
             <li>
-              <a href="https://facebook.com/">
+              <a href="https://mmimontbeliard.com">
                 <i class="fas fa-globe"></i>
               </a>
             </li>
