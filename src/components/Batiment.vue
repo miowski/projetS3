@@ -4,12 +4,10 @@
       <router-link to="/" class="previous">
         <i class="fas fa-arrow-left"></i>
       </router-link>
-      <div v-for="person in personList" class="person">
-        <img :src="person.acf.image.url" alt="Image" class="profile-picture">
-        <h2>{{ person.acf.nom }}</h2>
-        <p class="details"><small>{{ person.acf.type }} • <a v-if="person.acf.website" :href="person.acf.website">Site web</a></small>
-        </p>
-        <p v-if="person.acf.description">{{ person.acf.description }}</p>
+      <div v-for="building in buildingList" class="building">
+        <img :src="building.acf.image.url" alt="Image" class="profile-picture">
+        <h2>{{ building.acf.nom }}</h2>
+        <p v-if="building.acf.description">{{ building.acf.description }}</p>
       </div>
     </main>
   </div>
@@ -22,20 +20,20 @@ import axios from 'axios';
 import _ from 'lodash';
 
 export default {
-  name: 'Personne',
+  name: 'Batiment',
   data() {
     return {
-      personList: []
+      buildingList: []
     }
   },
 
   created() {
     // Liste des sections
-    axios.get(param.host + 'personne')
+    axios.get(param.host + 'batiment')
       .then(response => {
         console.log('Réponse :', response);
-        this.personList = _.filter(response.data, {'slug': this.$route.query.q});
-        console.log('Réponse filtrée :', this.personList);
+        this.buildingList = _.filter(response.data, {'slug': this.$route.query.q});
+        console.log('Réponse filtrée :', this.buildingList);
       })
       .catch(error => console.log(error))
   },
@@ -49,7 +47,7 @@ main {
   padding: 2rem 1rem;
 }
 
-.person {
+.building {
   display: block;
   margin: 1rem auto;
 }
@@ -60,7 +58,7 @@ main {
   border-radius: 10rem;
 }
 
-.profile-picture, .person > h2, .details {
+.profile-picture, .building > h2 {
   display: block;
   margin: 0.5rem auto;
   text-align: center;
