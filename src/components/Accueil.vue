@@ -59,7 +59,7 @@
             de nos sociétés, on constate l’avant-gardisme de l’initiative. Zoom sur l’évolution du département MMI
             Montbéliard, depuis ses débuts en 1997.</p>
           <div v-for="section in orderedSectionList" :key="section.id" class="timeline-block">
-            <h1><span>{{ section.acf.year | orderBy }}</span> {{ section.acf.title }}</h1>
+            <h1><span>{{ section.acf.year }}</span> {{ section.acf.title }}</h1>
             <p>{{ section.acf.description }}</p>
             <img :src="section.acf.image" alt="Image">
           </div>
@@ -90,12 +90,6 @@ export default {
         this.sectionList = response.data;
       })
       .catch(error => console.log(error))
-  },
-
-  computed: {
-    orderedSectionList: function () {
-      return _.orderBy(this.sectionList, 'acf.year');
-    }
   }
 }
 </script>
@@ -214,10 +208,6 @@ export default {
 
 @media (min-width: 768px) {
 
-  .intro {
-    height: calc(100vh - 4rem)
-  }
-
   .timeline-block {
     padding: 3rem;
     margin: auto 3rem;
@@ -268,6 +258,12 @@ export default {
 
   .intro-photo {
     max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-height: 1080px) {
+  .intro {
+    height: calc(100vh - 4rem)
   }
 }
 </style>
