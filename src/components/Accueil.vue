@@ -24,7 +24,7 @@
             <p>2022</p>
           </div>
           <div class="sub-intro">
-            <img class="intro-photo" src="../assets/intro-photo.png" alt="Intro photo">
+            <img class="intro-photo" src="../assets/img/intro-photo.jpg" alt="Intro photo">
             <div class="intro-text">
               <h1>Le département MMI Montbéliard fête ses 25 ans !</h1>
               <p>Retraçons l'histoire du département, de sa création jusqu'à aujourd'hui.</p>
