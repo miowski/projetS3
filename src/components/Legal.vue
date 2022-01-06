@@ -33,7 +33,8 @@
         rectification aux données vous concernant par simple demande mail, écrite ou téléphonique. Le département MMI et
         Philémon VARRET, Romain VILLAR, Lucas VEROVE ne peuvent être tenus responsable du contenu du site. Ce site est
         exploité par le département MMI. La présentation et chacun des éléments, y compris les marques, logos et noms de
-        domaine, apparaissant sur le site http://www.monsite.com sont protégés par les lois en vigueur sur la propriété
+        domaine, apparaissant sur le site http://mmi25ans.pvarret.fr sont protégés par les lois en vigueur sur la
+        propriété
         intellectuelle, et appartiennent au département MMI, ou font l'objet d'une autorisation d'utilisation. Aucun
         élément composant le site ne peut être copié, reproduit, modifié, réédité, chargé, dénaturé, transmis ou
         distribué de quelque manière que ce soit, sous quelque support que ce soit, de façon partielle ou intégrale,
@@ -47,13 +48,10 @@
         entier, et seule sa version en langue française fait foi en vue de son interprétation.</p>
 
       <h2>Graphisme, photos et illustrations</h2>
-      <p>
-        Le graphisme (incluant le webdesign et le logo) a été réalisé par Romain VILLAR.
-        Les photographies ont été réalisées par Philémon VARRET, Romain VILLAR, Lucas VEROVE. Les illustrations et
-        visuels ont été téléchargés depuis les banques d’images libres de droits Freepik, Pixabay, Unsplash, Flaticon
-        etc.
-      </p>
 
+      <p>Le graphisme a été réalisé par Romain VILLAR. Le logo est la propriété de l'IUT Belfort-Montbéliard.
+        Les photographies ont été réalisées par Philémon VARRET, Romain VILLAR, Lucas VEROVE. Certaines illustrations
+        proviennent de la banque d'images libres de droit <a href="https://www.freepik.com">Freepik</a>.</p>
       <h2>Déclaration à la CNIL</h2>
       <p>Ce site ne récoltant aucune donnée personnelle, le RGPD ne s'y applique pas.
         <br>

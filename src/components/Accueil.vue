@@ -74,7 +74,7 @@ import axios from 'axios';
 import _ from 'lodash';
 
 export default {
-  name: 'Home',
+  name: 'Accueil',
   data() {
     return {
       sectionList: []
@@ -156,24 +156,16 @@ export default {
   padding: 1rem;
   border: solid #9fe5d0;
   border-radius: 5rem;
+  box-shadow: lightgrey 0 4px 7px;
+  transition: box-shadow 1s;
 }
 
 #intro-arrow:hover {
-  animation: intro-arrow .3s;
+  box-shadow: lightgrey 0 2px 4px;
 }
 
-@keyframes intro-arrow {
-  0% {
-    top: 0;
-  }
-
-  50% {
-    top: -1rem;
-  }
-
-  100% {
-    top: 0;
-  }
+#intro-arrow:active {
+  box-shadow: none;
 }
 
 #line {
