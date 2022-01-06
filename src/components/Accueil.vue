@@ -51,7 +51,8 @@
           </a>
         </div>
         <div class="timeline" id="timeline">
-          <p id="timeline-intro-text"><strong>Il y a 25 ans était décrétée l’ouverture d’un département d’un genre nouveau : Service Réseau et
+          <p id="timeline-intro-text"><strong>Il y a 25 ans était décrétée l’ouverture d’un département d’un genre
+            nouveau : Service Réseau et
             Communications. </strong>
             Alors qu’Internet se répand à grande vitesse, cette formation forme de futurs ingénieurs capables de
             créer des réseaux d’ordinateurs et des sites web. Aujourd’hui, au vu de la place qu’a pris Internet au sein
@@ -134,10 +135,6 @@ export default {
   width: fit-content;
 }
 
-.intro {
-  height: calc(100vh - 4rem)
-}
-
 .intro-text > h1 {
   font-size: 2.25rem;
 }
@@ -216,6 +213,10 @@ export default {
 }
 
 @media (min-width: 768px) {
+
+  .intro {
+    height: calc(100vh - 4rem)
+  }
 
   .timeline-block {
     padding: 3rem;
