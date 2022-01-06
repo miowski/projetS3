@@ -132,7 +132,7 @@ main {
 }
 
 .nav-content {
-  max-width: 940px;
+  max-width: 1224px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -146,7 +146,7 @@ main {
 }
 
 footer, main {
-  max-width: 940px;
+  max-width: 1224px;
   display: block;
   margin: auto;
 }

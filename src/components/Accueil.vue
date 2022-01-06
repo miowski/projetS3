@@ -112,7 +112,7 @@ export default {
 }
 
 .timeline {
-  max-width: 940px;
+  max-width: 1224px;
   display: block;
   margin: auto;
 }

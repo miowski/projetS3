@@ -77,7 +77,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .legal {
-  max-width: 940px;
+  max-width: 1224px;
   display: block;
   margin: auto;
   padding: 1rem;
