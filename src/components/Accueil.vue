@@ -58,7 +58,7 @@
             créer des réseaux d’ordinateurs et des sites web. Aujourd’hui, au vu de la place qu’a pris Internet au sein
             de nos sociétés, on constate l’avant-gardisme de l’initiative. Zoom sur l’évolution du département MMI
             Montbéliard, depuis ses débuts en 1997.</p>
-          <div v-for="section in orderedSectionList" :key="section.id" class="timeline-block">
+          <div v-for="section in sectionList" :key="section.id" class="timeline-block">
             <h1><span>{{ section.acf.year }}</span> {{ section.acf.title }}</h1>
             <p>{{ section.acf.description }}</p>
             <img :src="section.acf.image" alt="Image">

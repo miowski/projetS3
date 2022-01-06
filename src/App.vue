@@ -4,7 +4,7 @@
       <nav>
         <div class="nav-content">
           <router-link to="/">
-            <img id="nav-logo" src="assets/img/mmi-logo.png" alt="Logo du MMI (contour)">
+            <img id="nav-logo" src="./assets/img/mmi-logo.png" alt="Logo du MMI (contour)">
           </router-link>
           <div>
             <ul class="socials">
