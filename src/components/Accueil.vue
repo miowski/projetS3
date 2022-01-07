@@ -57,11 +57,11 @@
             Alors qu’Internet se répand à grande vitesse, cette formation forme de futurs ingénieurs capables de
             créer des réseaux d’ordinateurs et des sites web. Aujourd’hui, au vu de la place qu’a pris Internet au sein
             de nos sociétés, on constate l’avant-gardisme de l’initiative. Zoom sur l’évolution du département MMI
-            Montbéliard, depuis ses débuts en 1997.</p>
-          <div v-for="section in sectionList" :key="section.id" class="timeline-block">
+            Montbéliard, depuis sa création en 1997 par <a href="https://mmi25ans.pvarret.fr/#/personne?q=dmercier">Daniel Mercier</a>.</p>
+          <div v-for="section in orderedSections" :key="section.id" class="timeline-block">
             <h1><span>{{ section.acf.year }}</span> {{ section.acf.title }}</h1>
             <p>{{ section.acf.description }}</p>
-            <img :src="section.acf.image" alt="Image">
+            <img v-if="section.acf.image" :src="section.acf.image" alt="Image">
           </div>
         </div>
       </div>
@@ -90,8 +90,17 @@ export default {
         this.sectionList = response.data;
       })
       .catch(error => console.log(error))
+  },
+
+  computed: {
+    orderedSections: function () {
+      return _.orderBy(this.sectionList, 'acf.year')
+    }
   }
+
 }
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -166,6 +175,14 @@ export default {
   animation: timeline-bar 5s linear infinite;
 }
 
+.timeline-block a {
+  color: black;
+}
+
+.timeline-block a:hover {
+  color: #9fe5d0;
+}
+
 @keyframes timeline-bar {
   to {
     stroke-dashoffset: -60.1;
@@ -223,16 +240,6 @@ export default {
     max-width: 50%;
     height: auto;
     padding: 1rem;
-  }
-
-  .timeline-block:nth-last-child(1)::after {
-    content: "/";
-    display: block;
-    position: relative;
-    writing-mode: vertical-lr;
-    bottom: -1rem;
-    left: -1.65rem;
-    font-weight: 900;
   }
 
   .timeline-block:nth-last-child(1)::after {
