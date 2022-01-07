@@ -7,7 +7,8 @@
       <div v-for="person in personList" class="person">
         <img :src="person.acf.image.url" alt="Image" class="profile-picture">
         <h2>{{ person.acf.nom }}</h2>
-        <p class="details"><small>{{ person.acf.type }} • <a v-if="person.acf.website" :href="person.acf.website">Site web</a></small>
+        <p class="details"><small>{{ person.acf.type }} <span v-if="person.acf.website">• <a :href="person.acf.website">
+          Site web</a></span></small>
         </p>
         <p v-if="person.acf.description">{{ person.acf.description }}</p>
       </div>

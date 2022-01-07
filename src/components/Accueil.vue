@@ -57,7 +57,8 @@
             Alors qu’Internet se répand à grande vitesse, cette formation forme de futurs ingénieurs capables de
             créer des réseaux d’ordinateurs et des sites web. Aujourd’hui, au vu de la place qu’a pris Internet au sein
             de nos sociétés, on constate l’avant-gardisme de l’initiative. Zoom sur l’évolution du département MMI
-            Montbéliard, depuis sa création en 1997 par <a href="https://mmi25ans.pvarret.fr/#/personne?q=dmercier">Daniel Mercier</a>.</p>
+            Montbéliard, depuis sa création en 1997 par <a href="https://mmi25ans.pvarret.fr/#/personne?q=dmercier">
+              Daniel Mercier</a>.</p>
           <div v-for="section in orderedSections" :key="section.id" class="timeline-block">
             <h1><span>{{ section.acf.year }}</span> {{ section.acf.title }}</h1>
             <p>{{ section.acf.description }}</p>
@@ -78,7 +79,8 @@ export default {
   name: 'Accueil',
   data() {
     return {
-      sectionList: []
+      sectionList: [],
+      rawHtml: ''
     }
   },
 
